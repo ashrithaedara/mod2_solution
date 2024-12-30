@@ -1,0 +1,75 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+.section .section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.25em;
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .section {
+        width: 30%;
+    }
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section {
+        width: 48%;
+        margin: 1%;
+    }
+    .section:nth-child(3) {
+        width: 100%;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
