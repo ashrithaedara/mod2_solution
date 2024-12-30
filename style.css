@@ -1,15 +1,17 @@
 /* General Reset */
 * {
-    margin: 0;
+    margin: 3;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
     line-height: 1.6;
     padding: 10px;
+    
 }
 
 /* Header Styling */
@@ -24,39 +26,49 @@ header h1 {
 
 /* Section Styling */
 .section {
-    border: 1px solid black;
-    padding: 20px;
-    margin: 10px;
-    background-color: #f4f4f4;
+    border: 3px solid black;
+    padding: 25px;
+    margin-top: 0px;
+    margin:10px;
+    background-color: #aeacac;
     position: relative;
 }
 .section .section-title {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #333;
-    color: white;
-    padding: 5px;
-    border: 1px solid black;
+    position: absolute; /* Keep it absolute for positioning */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    margin: 0px; 
+    color: rgb(230, 17, 17);
+    padding: 3px;
+    border: 2px solid rgb(15, 15, 15);
     font-size: 1.25em;
 }
 
+.section.chicken .section-title {
+    background-color: #FFDDC1; /* Light peach color */
+}
+.section.beef .section-title {
+    background-color: #FFABAB; /* Light red color */
+}
+
+.section.sushi .section-title {
+    background-color: #C1E1FF; /* Light blue color */
+}
 /* Desktop Layout */
 @media (min-width: 992px) {
     main {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
     .section {
         width: 30%;
     }
 }
-
 /* Tablet Layout */
 @media (min-width: 768px) and (max-width: 991px) {
     main {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
     }
     .section {
         width: 48%;
